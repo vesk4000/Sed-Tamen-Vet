@@ -51,6 +51,25 @@ function setSlides(slide2)
 	slides2[slide2].style.display = "block";  
 }
 
+function mouseOver()
+{
+	previd = document.getElementsByClassName("prev");
+	previd[0].style.color = "white";
+	previd[0].style.backgroundColor = "rgba(0,0,0,0.8)";
+	nextid = document.getElementsByClassName("next");
+	nextid[0].style.color = "white";
+	nextid[0].style.backgroundColor = "rgba(0,0,0,0.8)";
+}
+function mouseOut()
+{
+	previd = document.getElementsByClassName("prev");
+	previd[0].style.color = "rgba(0,0,0,0)";
+	previd[0].style.backgroundColor = "rgba(0,0,0,0)";
+	nextid = document.getElementsByClassName("next");
+	nextid[0].style.color = "rgba(0,0,0,0)";
+	nextid[0].style.backgroundColor = "rgba(0,0,0,0)";
+}
+
 /*$(document).ready(function(){
 setSlides(0);
 });*/
