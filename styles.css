@@ -208,4 +208,14 @@ div.servicesContainer div:hover ul li
 {
 	/*border-style: solid;
 	border-width: 5px 5px 5px 5px;*/
+	cursor: pointer;
+}
+.listed
+{
+	/*margin-top:20px;*/
+}
+.listed:hover
+{
+	background-color: white;
+	color:green;
 }
