@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<link rel = "stylesheet" href = "styles.css">
+	<script type="text/javascript" src = "jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src = "script.js"></script>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<title>Sed Tamen - ветеринарен център </title>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArKTZaVjNd_lUAyZlzy7UmakqBTjmwwQE&callback=initMap"></script>
+</head>
+<body>
+	<!-- MAINMENU -->
+	<div class = "mainmenu"><center>
+		<span><img src="favicon_white.png"> Ветеринарен център Sed Tamen<span><span id = "space"></span><a href="#AboutUs">За нас</a><a href="#Services">Услуги</a><a href="#Contacts">Контакти & График</a><a href="#team">Екип</a>
+	</center></div>
+	<!-- SLIDESHOW -->
+	<div class = "slideshowContainer" onmouseover="mouseOver()" onmouseout="mouseOut()">
+		<div class="slide" style="display:inline-block">
+			<img src="small_dog_banner.png">
+			<!--<div class="slideshowText">Caption Text</div>-->
+		</div>
+		<div class="slide">
+			<img src="cats_banner.png">
+			<!--<div class="slideshowText">Caption Text2</div>-->
+		</div>
+		<div class="slide">
+			<img src="vet_banner.png">
+			<!--<div class="slideshowText">Caption Text3</div>-->
+		</div>
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		<div style="left: 50%; position: absolute; bottom: 5%">
+			<span class="dot" id = "dot1" onclick="currentSlide(1)"></span> 
+			<span class="dot" id = "dot2" onclick="currentSlide(2)"></span> 
+			<span class="dot" id = "dot3" onclick="currentSlide(3)"></span> 
+		</div>
+	</div>
+	<!-- MAINTEXT -->
+	<center><div class = "mainText">
+		<div class = "insideMainText">
+		<span class="title" id="AboutUs">За нас<br></span><br>
+		
+		<span class = "greenQuotes">Sed Tamen е водещ, съвременен ветеринарен център в град Варна, в който ще получите професианално облужване от най-високо ниво. Специализираме в профилактика и лечението на заболявания при дребните домашни любимци - кучета, котки, птици и гризачи.</span>
+		<div class="icons">
+			<!--<div class="icon">
+				<img src="tick.png">
+				<br>Нашата клиниката е съобразена с всички изискванията за ветеринарни здравни заведения. Помещенията се обеззаразяват и дезинфекционират.
+			</div>-->
+			<div class="icon">
+				<center><img src="building.png"></center>
+				Нашата клиника разполага с модерна база и техника, съобразена с всички изискванията за ветеринарни здравни заведения, за да осигурим безопасна и стерилна среда за вашите любимци.
+			</div>
+			<div class="icon" style="margin-left:10px;margin-right:10px">
+				<center><img src="lab.png"></center>
+				Разполагаме с лаборатория за извършване на микроскона диагностика на кожни заболявания, изследвания на урина и пълни кръвни изследвания.
+			</div>
+			<div class="icon">
+				<center><img src="doctor-icon.png"></center>
+				Докторите работещи в нашата клиника са доказани професионалисти с дълъг опит и членове на Българската ветеринарна организация.
+			</div>
+			</div>
+		<!-- DROPDOWN MENU-->
+		<span class="title" id = "Services">Услуги<br></span>
+		<div class="servicesContainer">
+			<div style="width: 160px;height:20px;margin-top:20px;">
+				<a style="width: 150px;position:absolute; background-color: green;color: white;">Услуги</a>
+				<ul style="position:absolute;">
+					<li style = "margin-top:19px;" class="listed"><a onclick = "setSlides(0)">Профилактика</a></li>
+					<li class="listed"><a onclick = "setSlides(1)">Диагностика</a></li>
+					<li class="listed"><a onclick = "setSlides(2)">Ваксинация</a></li>
+					<li class="listed"><a onclick = "setSlides(3)">Стоматология</a></li>
+					<li class="listed"><a onclick = "setSlides(4)">Акушерство</a></li>
+					<li class="listed"><a onclick = "setSlides(5)">Хирургия</a></li>
+					<li class="listed"><a onclick = "setSlides(6)">Хотел и обучение</a></li>
+				</ul>
+			</div>
+			<div style="height:300px;" class="secondSlide">
+				
+				<img src="miniimageTemplate.png" style="float:left;">
+				<div class="smallText">
+				<span class="miniheading">Профилактика</span>
+				<br><br>
+				Редица здравословни проблеми и сериозни заболявания могат да бъдат избегнати, ако профилактично животното е преглеждано във ветеринарна клиника. Не отлагайте, посетете ни!
+				</div>
+			</div>
+			<div style="height:300px;display:none" class="secondSlide">
+				
+				<img src="miniimageTemplate.png" style="float:left;">
+				<div class="smallText">
+				<span class="miniheading">Диагностика</span>
+				<br><br>
+				В Sed Tamen предлагаме специализирани прегледи в редица области, за да открием причините за всички проблеми с вашите любимци.
+				</div>
+			</div>
+			<div style="height:300px;display:none" class="secondSlide">
+				
+				<img src="miniimageTemplate.png" style="float:left;">
+				<div class="smallText">
+				<span class="miniheading">Ваксинация</span>
+				<br><br>
+				Ваксинирането е важно за вашите домашни любимци, за да бъдат предпазени от предодвратими болести.
+				</div>
+			</div>
+			<div style="height:300px;display:none" class="secondSlide">
+				
+				<img src="miniimageTemplate.png" style="float:left;">
+				<div class="smallText">
+				<span class="miniheading">Стоматология</span>
+				<br><br>
+				Заболяванията свързани с устната кухина са широко застъпени при всички животни. Зъбните проблеми могат да бъдат много сериозни и ако не бъдат лекувани могат да доведат до тежки последици.
+				</div>
+			</div>
+			<div style="height:300px;display:none" class="secondSlide">
+				
+				<img src="miniimageTemplate.png" style="float:left;">
+				<div class="smallText">
+				<span class="miniheading">Акушерство</span>
+				<br><br>
+				Бременността е особено състояние на животното, когато натоварването на всички системи и органи в тялото се увеличава неколкократно. Стопаните трябва да се отнасят много отговорно към възможността да имат потомство от домашния любимец.
+				</div>
+			</div>
+			<div style="height:300px;display:none" class="secondSlide">
+				
+				<img src="miniimageTemplate.png" style="float:left;">
+				<div class="smallText">
+				<span class="miniheading">Хирургия</span>
+				<br><br>
+				Във ветеринарна клиника Sed Tamen можем да изпълняваме всякакви операции
+				</div>
+			</div>
+			<div style="height:300px;display:none" class="secondSlide">
+				
+				<img src="miniimageTemplate.png" style="float:left;">
+				<div class="smallText">
+				<span class="miniheading">Хотел и обучение</span>
+				<br><br>
+				Предлагаме да се грижим за домашните ви любимци доката вас ви няма.
+				</div>
+			</div>
+			
+		</div>
+		<!-- END DROPDOWN MENU -->
+		<span class="title" id = "Contacts">Контакти & График</span><br><br>
+		<div class = "contactsContainer">
+		<div id="map"></div>
+		<div class="contactsText">Адрес: [insert address]<br>Телефон: 0555 555 555<br>24/7 Телефон за спешни ситуации: 0666 666 666<br><div><br>Клиника:<br>Делници: 09:00 - 21:00<br>Събота: 09:00 - 19:00<br>Неделя: 10:00 - 15:00</div></div>
+		</div>
+		<span class="title" id = "team">Екип</span><br><br>
+		<div>
+		<div class="teamMember" style="float:left;"><img src="insertImage.png"><br><span class="miniheading">[Insert doctor name]</span><br>[insert doctor description]<br><br></div>
+		<div class="teamMember" style="margin-left:300px;"><img src="insertImage.png"><br><span class="miniheading">[Insert doctor name]</span><br>[insert doctor description]<br><br></div>
+		</div>
+		<div>
+		<div class="teamMember" style="float:left;"><img src="insertImage.png"><br><span class="miniheading">[Insert doctor name]</span><br>[insert doctor description]<br><br></div>
+		<div class="teamMember" style="margin-left:300px;"><img src="insertImage.png"><br><span class="miniheading">[Insert doctor name]</span><br>[insert doctor description]<br><br></div>
+		</div>
+	</div>
+	</div></center>
+	<div style = "width: 100%;height: 100px;background-color:#2d2d2d;text-align:center;color:white;"><br><br>made by vesk</div>
+	<!--<div class = "gallery">
+		<img class = "mainimage" src = "small_dog_banner.png" alt = "Някво куче">
+	</div>-->
+	</body>
+</html>
