@@ -2,30 +2,31 @@
 <html>
 <head>
 	<link rel = "stylesheet" href = "styles.css">
-	<script type="text/javascript" src = "jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src = " jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src = "script.js"></script>
 	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<title>Sed Tamen - ветеринарен център </title>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArKTZaVjNd_lUAyZlzy7UmakqBTjmwwQE&callback=initMap"></script>
 </head>
 <body>
 	<!-- MAINMENU -->
 	<div class = "mainmenu"><center>
-		<span>Ветеринарен център Sed Tamen<span><span id = "space"></span><a href="#AboutUs">За нас</a><a href="#Services">Услуги</a><a href="#Contacts">Контакти</a><a href="#times">График</a><a href="#team">Екип</a>
+		<span><img src="favicon_white.png"> Ветеринарен център Sed Tamen<span><span id = "space"></span><a href="#AboutUs">За нас</a><a href="#Services">Услуги</a><a href="#Contacts">Контакти & График</a><a href="#team">Екип</a>
 	</center></div>
 	<!-- SLIDESHOW -->
-	<div class = "slideshowContainer">
+	<div class = "slideshowContainer" onmouseover="mouseOver()" onmouseout="mouseOut()">
 		<div class="slide" style="display:inline-block">
 			<img src="small_dog_banner.png">
-			<div class="slideshowText">Caption Text</div>
+			<!--<div class="slideshowText">Caption Text</div>-->
 		</div>
 		<div class="slide">
 			<img src="cats_banner.png">
-			<div class="slideshowText">Caption Text2</div>
+			<!--<div class="slideshowText">Caption Text2</div>-->
 		</div>
 		<div class="slide">
 			<img src="vet_banner.png">
-			<div class="slideshowText">Caption Text3</div>
+			<!--<div class="slideshowText">Caption Text3</div>-->
 		</div>
 		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 		<a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -35,53 +36,138 @@
 			<span class="dot" id = "dot3" onclick="currentSlide(3)"></span> 
 		</div>
 	</div>
+	<!-- MAINTEXT -->
 	<center><div class = "mainText">
+		<div class = "insideMainText">
 		<span class="title" id="AboutUs">За нас<br></span><br>
-		<span class = "greenQuotes">Ветеринарен център Sed Tamen е водеща, съвременна клиника в град Варна. Специализираме в хирургия и лечението на заболявания при дребните домашни любимци - кучета, котки, птици и хамстери.</span>
+		
+		<span class = "greenQuotes">Sed Tamen е водещ, съвременен ветеринарен център в град Варна, в който ще получите професианално облужване от най-високо ниво. Специализираме в профилактика и лечението на заболявания при дребните домашни любимци - кучета, котки, птици и гризачи.</span>
 		<div class="icons">
-			<div class="icon">
+			<!--<div class="icon">
 				<img src="tick.png">
-				<br>Нашата клиниката е съобразена с всички изискванията за ветеринарни здравни заведения. Помещенията се обеззаразяват и дезинфекционират.
+				<br>Нашата клиника е съобразена с всички изисквания за ветеринарни здравни заведения. Помещенията се обеззаразяват и дезинфекционират.
+			</div>-->
+			<div class="icon">
+				<center><img src="building.png"></center>
+				Нашата клиника разполага с модерна база и техника, съобразена с всички изисквания за ветеринарни здравни заведения, за да осигурим безопасна и стерилна среда за вашите любимци.
+			</div>
+			<div class="icon" style="margin-left:10px;margin-right:10px">
+				<center><img src="lab.png"></center>
+				Разполагаме с лаборатория за извършване на микроскопска диагностика на кожни заболявания, изследвания на урина и пълни кръвни изследвания.
 			</div>
 			<div class="icon">
-				<img src="lab.png">
-			<br>Разполагаме с лабораторията за извършване на микроскона диагностика на кожни заболявания, изследвания на урина и пълни кръвни изследвания.
+				<center><img src="doctor-icon.png"></center>
+				Докторите, работещи в нашата клиника, са доказани професионалисти с дълъг опит и членове на Българската ветеринарна организация.
 			</div>
-			<div class="icon">
-				<img src="building.png">
-			<br>Разполагаме с модерна база и техника, за да осигурим безопасна и стерилна среда за вашите любимци.
 			</div>
-			<div class="icon">
-				<img src="first_aid.png">
-			<br>Предлагаме лабораторна диагностика, ехограф, ултразвук и апаратура за прецизна диагностика и лечение.
-			</div>
-		</div>
+		<!-- TABZ-->
 		<span class="title" id = "Services">Услуги<br></span>
-		<div class="servicesContainer">
-			<div style="width: 160px;height:20px;">
-				<a style="width: 190px;height:20px;background-color: green;color: white;padding-right: 0.6em">Услуги&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</a>
-				<ul style="position:absolute;">
-					
-					<li class="listed"><a onclick = "setSlides(0)">Профилактика</a></li>
+		<div class = "tabsContainer">
+		<div class = "tab"><a onclick = "setSlides(1)" onmouseover="mouseOverTab(1)" onmouseout="mouseOutTab(1)">Профилактика</a></div>
+		<div class = "tab"><a onclick = "setSlides(2)" onmouseover="mouseOverTab(2)" onmouseout="mouseOutTab(2)">Ваксинация</a></div>
+		<div class = "tab"><a onclick = "setSlides(3)" onmouseover="mouseOverTab(3)" onmouseout="mouseOutTab(3)">Стоматология</a></div>
+		<div class = "tab"><a onclick = "setSlides(4)" onmouseover="mouseOverTab(4)" onmouseout="mouseOutTab(4)">Акушерство</a></div>
+		<div class = "tab"><a onclick = "setSlides(5)" onmouseover="mouseOverTab(5)" onmouseout="mouseOutTab(5)">Хирургия</a></div>
+		<div class = "tab"><a onclick = "setSlides(6)" onmouseover="mouseOverTab(6)" onmouseout="mouseOutTab(6)">Хотел и обучение</a></div>
+		<br>
+		</div>
+		<!--<div class="servicesContainer">
+			<div style="width: 160px;height:20px;margin-top:20px;">
+				<a style="width: 150px;position:absolute; background-color: green;color: white;">Услуги</a>
+				<ul>
+					<li style = "margin-top:19px;" class="listed"><a onclick = "setSlides(0)">Профилактика</a></li>
 					<li class="listed"><a onclick = "setSlides(1)">Диагностика</a></li>
+					<li class="listed"><a onclick = "setSlides(2)">Ваксинация</a></li>
+					<li class="listed"><a onclick = "setSlides(3)">Стоматология</a></li>
+					<li class="listed"><a onclick = "setSlides(4)">Акушерство</a></li>
+					<li class="listed"><a onclick = "setSlides(5)">Хирургия</a></li>
+					<li class="listed"><a onclick = "setSlides(6)">Хотел и обучение</a></li>
 				</ul>
-			</div>
+			</div>-->
 			<div style="height:300px;" class="secondSlide">
 				
-				<img src="profilaktika.jpg" style="width:400px;float:left;">
-				Profilaktika fdfd sdss adssd dsffgddf ssffgd fgffer dfhdvj
+				<img src="miniimageTemplate.png" style="float:left;">
+				<div class="smallText">
+				<span class="miniheading">Профилактика</span>
+				<br><br>
+				Редица здравословни проблеми и сериозни заболявания могат да бъдат избегнати, ако профилактично животното е преглеждано във ветеринарна клиника. Не отлагайте, посетете ни!<p><br>- обезпаразитяване<br>- имплантиране на микрочипове</p> 
+				</div>
 			</div>
 			<div style="height:300px;display:none" class="secondSlide">
 				
-				<img src="profilaktika.jpg" style="width:400px;float:left;">
-				Profiasasslaktika fdfd sdss adssd dsffgddf ssffgd fgffer dfhdvj
+				<img src="miniimageTemplate.png" style="float:left;">
+				<div class="smallText">
+				<span class="miniheading">Диагностика</span>
+				<br><br>
+				- ехограф<br>- тестове за инфекциозни заболявания<br>- кръвни изследвания<br>- микроскопско изследване на кожа, кръв, урина и фекалии<br>- изследване за токсоплазмоза и бяс 
+				</div>
 			</div>
+			<div style="height:300px;display:none" class="secondSlide">
+				
+				<img src="miniimageTemplate.png" style="float:left;">
+				<div class="smallText">
+				<span class="miniheading">Ваксинация</span>
+				<br><br>
+				 Предлагаме ваксини против:<br>- гана (дистемпер)<br>- инфекциозен хепатит<br>- парвовирозаp<br>- параинфлуенца<br>- лептоспироза (двувалентна)<br>- бяс 
+				</div>
+			</div>
+			<div style="height:300px;display:none" class="secondSlide">
+				
+				<img src="miniimageTemplate.png" style="float:left;">
+				<div class="smallText">
+				<span class="miniheading">Стоматология</span>
+				<br><br>
+				Заболяванията, свързани с устната кухина, са широко застъпени при всички животни. Зъбните проблеми могат да бъдат много сериозни и ако не бъдат лекувани, могат да доведат до тежки последици.<p><br>-почистване на зъбен камък<br>-екстракция на млечни и постоянни зъби<br>-обтуриране на зъби</p>
+				</div>
+			</div>
+			<div style="height:300px;display:none" class="secondSlide">
+				
+				<img src="miniimageTemplate.png" style="float:left;">
+				<div class="smallText">
+				<span class="miniheading">Акушерство</span>
+				<br><br>
+				<br>-изкуствено осеменяване<br>-планирано или по спешност цезарово сечение<br>-изследване на хормонални нива за определяне на овулацията
+				</div>
+			</div>
+			<div style="height:300px;display:none" class="secondSlide">
+				
+				<img src="miniimageTemplate.png" style="float:left;">
+				<div class="smallText">
+				<span class="miniheading">Хирургия</span>
+				<br><br>
+				Във ветеринарна клиника Sed Tamen можем да изпълняваме всякакви операции, включително:
+				<p><br>-ортопедия<br>-коремна хирургия<br>-онкохирургия</p>
+				</div>
+			</div>
+			<div style="height:300px;display:none" class="secondSlide">
+				
+				<img src="miniimageTemplate.png" style="float:left;">
+				<div class="smallText">
+				<span class="miniheading">Хотел и обучение</span>
+				<br><br>
+				Предлагаме да се грижим за домашните Ви любимци, докато Вас Ви няма.
+				</div>
+			</div>
+			
 		</div>
-		<span class="title" id = "Contacts">Контакти</span><br>
-		<span class="title" id = "times">График</span><br>
-		<span class="title" id = "team">Екип</span><br>
-		Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus. Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis. Etiam imperdiet imperdiet orci. Nunc nec neque. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa. Sed cursus turpis vitae tortor. Donec posuere vulputate arcu. Phasellus accumsan cursus velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Phasellus consectetuer vestibulum elit. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Vestibulum fringilla pede sit amet augue. In turpis. Pellentesque posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. Nullam sagittis. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce id purus. Ut varius tincidunt libero. Phasellus dolor. Maecenas vestibulum mollis <!-- -->
+		<!-- END DROPDOWN MENU -->
+		<span class="title" id = "Contacts">Контакти & График</span><br><br>
+		<div class = "contactsContainer">
+		<div id="map"></div>
+		<div class="contactsText">Адрес: [insert address]<br>Телефон: 0555 555 555<br>24/7 Телефон за спешни ситуации: 0666 666 666<br><div><br>Клиника:<br>Делници: 09:00 - 21:00<br>Събота: 09:00 - 19:00<br>Неделя: 10:00 - 15:00</div></div>
+		</div>
+		<span class="title" id = "team">Екип</span><br><br>
+		<div>
+		<div class="teamMember" style="float:left;"><img src="insertImage.png"><br><span class="miniheading">[Insert doctor name]</span><br>[insert doctor description]<br><br></div>
+		<div class="teamMember" style="margin-left:300px;"><img src="insertImage.png"><br><span class="miniheading">[Insert doctor name]</span><br>[insert doctor description]<br><br></div>
+		</div>
+		<div>
+		<div class="teamMember" style="float:left;"><img src="insertImage.png"><br><span class="miniheading">[Insert doctor name]</span><br>[insert doctor description]<br><br></div>
+		<div class="teamMember" style="margin-left:300px;"><img src="insertImage.png"><br><span class="miniheading">[Insert doctor name]</span><br>[insert doctor description]<br><br></div>
+		</div>
+	</div>
 	</div></center>
+	<div style = "width: 100%;height: 100px;background-color:#2d2d2d;text-align:center;color:white;"><br><br>made by vesk</div>
 	<!--<div class = "gallery">
 		<img class = "mainimage" src = "small_dog_banner.png" alt = "Някво куче">
 	</div>-->
