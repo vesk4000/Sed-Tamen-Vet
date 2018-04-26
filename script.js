@@ -62,12 +62,22 @@ function setSlides(slide2)
 var ctab;
 function mouseOverTab(ctab)
 {
-	var i;
-	var tabz = document.getElementsByClassName("tab");
-	for(i = 0;i < tabz.length(); i++)
+var tabz = document.getElementsByClassName("tab");
+	tabz[ctab - 1].style.backgroundColor = "white";
+	tabz[ctab - 1].style.color = "green";
+}
+function mouseOutTab(ctab)
+{
+var slides2 = document.getElementsByClassName("secondSlide");
+for(i = 0;i < slides2.length; i++)
 	{
-		
+		if(slides2[i].style.display == "block")
+		slide2 = i;
 	}
+var tabz = document.getElementsByClassName("tab");
+	if(ctab != slide2){
+		tabz[ctab - 1].style.backgroundColor = "green";
+		tabz[ctab - 1].style.color = "white";}
 }
 
 function mouseOver()
